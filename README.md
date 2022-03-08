@@ -8,6 +8,7 @@ This is a simple calendar application that allows a use to create their schedule
 
 ## Links
 GitHub Link: https://github.com/camryngoins/work-day-scheduler
+
 Deployed Application Link: https://camryngoins.github.io/work-day-scheduler/
 
 ## Screenshot 
