@@ -1,14 +1,13 @@
 // get saved data from local storage for all hours 
-$("#time-8am .description").val(localStorage.getItem("time-8am"));
-$("#time-9am .description").val(localStorage.getItem("time-9am"));
-$("#time-10am .description").val(localStorage.getItem("time-10am"));
-$("#time-11am .description").val(localStorage.getItem("time-11am"));
-$("#time-12pm .description").val(localStorage.getItem("time-12pm"));
-$("#time-1pm .description").val(localStorage.getItem("time-1pm"));
-$("#time-2pm .description").val(localStorage.getItem("time-2pm"));
-$("#time-3pm .description").val(localStorage.getItem("time-3pm"));
-$("#time-4pm .description").val(localStorage.getItem("time-4pm"));
-$("#time-5pm .description").val(localStorage.getItem("time-5pm"));
+$("#9 .description").val(localStorage.getItem("9"));
+$("#10 .description").val(localStorage.getItem("10"));
+$("#11 .description").val(localStorage.getItem("11"));
+$("#12 .description").val(localStorage.getItem("12"));
+$("#13 .description").val(localStorage.getItem("13"));
+$("#14 .description").val(localStorage.getItem("14"));
+$("#15 .description").val(localStorage.getItem("15"));
+$("#16 .description").val(localStorage.getItem("16"));
+$("#17 .description").val(localStorage.getItem("17"));
 
 // display the current date and time 
 $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
@@ -23,12 +22,27 @@ $(".saveBtn").on("click", function() {
     localStorage.setItem(text, time);
 })
 
-var trackHours = function() {
+var timeTracker = function() {
+    // get current time 
     var currentHour = moment().hour();
-    
+    console.log(currentHour)
     // loop over each hour
     $(".time-block").each(function() {
-       
+        var timeBlockHour = $(this).attr("id")
+        if (timeBlockHour < currentHour) {
+            $(this).addClass("past");
+        }
+        else if (timeBlockHour == currentHour) {
+            $(this).removeClass("past");
+            $(this).addClass("present");
+        }
+        else if (timeBlockHour > currentHour) {
+            $(this).removeClass("past");
+            $(this).removeClass("present");
+            $(this).addClass("future");
+        }
     })
 }
-trackHours()
+timeTracker()
+ 
+
