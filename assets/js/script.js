@@ -15,9 +15,6 @@ $(".saveBtn").on("click", function() {
 })
 
 var timeTracker = function() {
-    console.log("im working")
-    console.log($("#9 .description"))
-    console.log(localStorage.getItem("9"))
 $("#9 .description").val(localStorage.getItem("9"));
 $("#10 .description").val(localStorage.getItem("10"));
 $("#11 .description").val(localStorage.getItem("11"));
