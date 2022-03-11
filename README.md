@@ -13,4 +13,4 @@ Deployed Application Link: https://camryngoins.github.io/work-day-scheduler/
 
 ## Screenshot 
 
-
+![workday-scheduler](https://user-images.githubusercontent.com/96854206/157790781-dc09e4ab-2d2b-40bc-8f9b-a61c4411c5d8.png)
