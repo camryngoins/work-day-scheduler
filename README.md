@@ -12,4 +12,5 @@ GitHub Link: https://github.com/camryngoins/work-day-scheduler
 Deployed Application Link: https://camryngoins.github.io/work-day-scheduler/
 
 ## Screenshot 
-!{Workday Scheduler}(./assets/images/workday-scheduler-img.png)
+
+
